@@ -111,4 +111,7 @@ app.post('/imageclarifai',(req, res)=>{
   .catch(err => res.status(400).json('unable to work with api'))
 })
 
-app.listen(3010);
+app.listen(process.env.PORT || 3010, () => {
+  console.log(`app is running on port ${process.env.PORT}`);
+  
+});
